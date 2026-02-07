@@ -2,7 +2,15 @@ baseURL = 'https://Underday.github.io/'
 languageCode = 'tr-tr'
 title = 'Darma'
 theme = 'PaperMod'
+# 1. Arama için gerekli veriyi (index.json) oluşturur
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
 
+# 2. Butonu tepeye (menüye) ekler
+[[menu.main]]
+  name = "Arama"
+  url = "/search/"
+  weight = 10
 [params]
   defaultTheme = "auto" 
   ShowReadingTime = true 
