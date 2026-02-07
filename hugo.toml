@@ -15,7 +15,7 @@ theme = 'PaperMod'
   defaultTheme = "auto" 
   ShowReadingTime = true 
   ShowShareButtons = true 
-
+  ShowPostNavLinks = true
 [params.homeInfoParams]
   Title = "Selam, ben Abdullah Talha 👋"
   Content = "Burada şiir ve denemeler bulacaksınız, iyi eğlenceler"
@@ -28,3 +28,5 @@ theme = 'PaperMod'
 [[params.socialIcons]]
   name = "instagram"
   url = "https://instagram.com/atalhakorkmaz"
+
+
