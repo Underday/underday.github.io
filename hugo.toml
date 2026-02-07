@@ -15,3 +15,16 @@ theme = 'PaperMod'
   defaultTheme = "auto" 
   ShowReadingTime = true 
   ShowShareButtons = true 
+
+[params.homeInfoParams]
+  Title = "Selam, ben Abdullah Talha 👋"
+  Content = "Burada şiir ve denemeler bulacaksınız, iyi eğlenceler"
+
+# Sosyal Medya İkonları (Her ikon için [[...]] kullanılır)
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/Underday"
+
+[[params.socialIcons]]
+  name = "instagram"
+  url = "https://instagram.com/atalhakorkmaz"
