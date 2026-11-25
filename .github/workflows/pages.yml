@@ -1,0 +1,42 @@
+name: Siteyi yayımla
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+  schedule:
+    - cron: "0 5 * * 1"   # her pazartesi 08:00 (TSİ): ORCID'deki yeni çalışmalar siteye gelsin
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+# Hazırlama ve yayın ayrı işler (GitHub'ın resmî şablonu). Aynı işte olunca yayın adımı
+# yüklenen dosyaları bazen göremiyor ("No artifacts named github-pages").
+jobs:
+  hazirla:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - name: ORCID'den akademik listeyi güncelle
+        run: python3 .github/scripts/orcid.py index.html
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+  yayimla:
+    needs: hazirla
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

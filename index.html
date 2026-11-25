@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abdullah Talha Korkmaz</title>
+<meta name="description" content="Dil ve konuşma terapisi üzerine çalışmalarım, klinik için yaptığım küçük araçlar ve yazılarım.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="hece.css">
+<style>
+  .kurum { margin: 2px 0 0; font-size: .95rem; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="sayfa">
+
+  <aside class="sol">
+    <div class="sol-ic">
+      <header>
+        <h1 class="ad">Abdullah Talha<br>Korkmaz</h1>
+        <!-- Unvanını buraya yaz -->
+        <p class="unvan">Dil ve konuşma terapisti</p>
+        <!-- Kurum satırı yayında ORCID'deki güncel görev kaydından dolar (.github/scripts/orcid.py) -->
+        <p class="kurum"><!-- ORCID:KURUM -->Araştırma görevlisi, Kapadokya Üniversitesi<!-- /ORCID:KURUM --></p>
+      </header>
+
+      <nav class="menu" aria-label="Bölümler">
+        <a href="#hakkimda">Hakkımda</a>
+        <a href="#araclar">Araçlar</a>
+        <a href="#akademik">Akademik</a>
+        <a href="#yazilar">Yazılar</a>
+        <a href="#projeler">Projeler</a>
+      </nav>
+
+      <figure class="resim">
+        <!-- Resim her açılışta rastgele çiziliyor, tıklayınca yenileniyor.
+             Kendi fotoğrafını koymak için bu <svg>'yi silip <img src="resim.jpg" alt="..."> yaz. -->
+        <svg id="resim" viewBox="0 0 400 400" role="img" aria-label="Rastgele renkli bir şekil ve üzerinden geçen ses dalgası. Yenilemek için tıklayın."></svg>
+        <figcaption><button type="button" class="yenile" id="yenile"><span class="yenile-ok" aria-hidden="true">↻</span> Başka bir tane çiz</button></figcaption>
+      </figure>
+
+      <div class="alt-satir">
+      <nav class="baglantilar" aria-label="Bağlantılar">
+        <a href="https://github.com/Underday">GitHub</a>
+        <a href="https://instagram.com/atalhakorkmaz">Instagram</a>
+        <a href="https://instagram.com/dkt_abdullahtalhakorkmaz">Instagram (DKT)</a>
+        <a href="https://orcid.org/0009-0009-3785-1099">ORCID</a>
+        <!-- <a href="https://scholar.google.com/...">Scholar</a> -->
+        <!-- E-posta adresleri botlar toplamasın diye parçalı: data-k @ öncesi, data-a @ sonrası. Sayfa sonundaki betik birleştirir. -->
+        <a class="eposta" data-k="talha.korkmaz" data-a="kapadokya.edu.tr" href="#">Kurumsal e-posta</a>
+        <a class="eposta" data-k="a.talha.korkmaz" data-a="gmail.com" href="#">E-posta</a>
+      </nav>
+      <button class="tema" id="tema" type="button">Tema: sistem</button>
+      </div>
+    </div>
+  </aside>
+
+  <main class="sag">
+    <p class="acilis">
+      <b>ATK</b>, araştırıyor, yapıp bozuyor ve arada şiire bulaşıyor.
+    </p>
+
+    <section id="hakkimda">
+      <h2>Hakkımda</h2>
+      <!-- Kendini birkaç cümleyle anlat -->
+      <p>Dil, ses ve işlemcisi olan her şeye meraklı. Dilin nasıl çalıştığını anlamak için bazen bir ses kaydını, bazen bir şiiri açıyor. Hazırını almak yerine kendisi kuruyor, gösterişsiz olanı seçiyor. Hobileri sık değişiyor, merakı aynı kalıyor. Okuyor, post-rock dinliyor, içini açıp bakabildiği her şeyi kurcalıyor, geride de birkaç yarım kalmış proje bırakıyor. Kendi tanımıyla hayat denemesi içerisindeki biri.</p>
+    </section>
+
+    <section id="araclar">
+      <h2>Araçlar</h2>
+      <ul class="kartlar">
+        <!-- Yeni araç eklemek için aşağıdaki <li> bloğunu kopyala -->
+        <li>
+          <a href="/materyal-denetcisi/">
+            <span class="kart-baslik">Materyal Denetçisi <span aria-hidden="true">↗</span></span>
+            <span class="kart-metin">Aileye gönderilecek terapi materyallerinde uygunsuz kelimeleri ve yazım hatalarını işaretler. PDF ve Word okur.</span>
+          </a>
+        </li>
+        <li>
+          <a href="/Praat-turkish/">
+            <span class="kart-baslik">Praat Türkçe <span aria-hidden="true">↗</span></span>
+            <span class="kart-metin">Ses analizi programı Praat için Türkçe arayüz, terim sözlüğü ve Türkçe ölçüm araçları.</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="akademik">
+      <h2>Akademik</h2>
+      <!-- ORCID işaretleri arası yayında ORCID'den kendiliğinden dolar (.github/scripts/orcid.py), elle düzenleme.
+      ORCID'de olmayan bir çalışmayı işaretlerin dışına aynı biçimde elle ekle:
+      <li><span class="yil">2026</span><div><a href="https://doi.org/...">Başlık</a><span class="kunye">Yazarlar. Dergi ya da kongre adı.</span><span class="tur">Bildiri</span></div></li> -->
+      <ol class="cizelge">
+        <!-- ORCID:BASLA -->
+        <li><span class="yil">2025</span><div><a href="https://doi.org/10.51261/yiu.2025.1750457">Yapay Zekânın Dil Modellemesinde Dil ve Konuşma Terapistleri Neler Yapabilir?</a><span class="kunye">Abdullah Talha Korkmaz, Nevin Yılmaz Çifteci. Yüksek İhtisas Üniversitesi Sağlık Bilimleri Dergisi.</span><span class="tur">Makale</span></div></li>
+        <!-- ORCID:BITIR -->
+      </ol>
+    </section>
+
+    <section id="yazilar">
+      <h2>Yazılar</h2>
+      <ol class="yazi-listesi">
+        <!-- Yeni yazı: yazilar/ klasörüne bir sayfa ekle, buraya şöyle bir satır yaz:
+        <li><a href="/yazilar/ad.html">Başlık</a><span class="tarih">Ay Yıl</span></li> -->
+        <li><span class="taslak">Şiir ve denemeler buraya eklenecek.</span></li>
+      </ol>
+    </section>
+
+    <section id="projeler">
+      <h2>Kişisel projeler</h2>
+      <ul class="kartlar">
+        <!-- Yeni proje eklemek için aşağıdaki <li> bloğunu kopyala, href'e depo adresini yaz:
+        <li>
+          <a href="https://github.com/Underday/depo-adi">
+            <span class="kart-baslik">Proje adı <span aria-hidden="true">↗</span></span>
+            <span class="kart-metin">Projenin tek cümlelik açıklaması.</span>
+          </a>
+        </li> -->
+        <li>
+          <a href="https://github.com/Underday/Task-tui">
+            <span class="kart-baslik">Task-tui <span aria-hidden="true">↗</span></span>
+            <span class="kart-metin">Google Tasks'i terminalden yöneten hafif bir arayüz.</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/Underday/Omarchy-snooker">
+            <span class="kart-baslik">Omarchy-snooker <span aria-hidden="true">↗</span></span>
+            <span class="kart-metin">Masaüstü çubuğunda süren snooker turnuvasını, canlı skorları ve günün maç programını gösteren bileşen.</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <footer>© 2026 Abdullah Talha Korkmaz</footer>
+  </main>
+
+</div>
+<script src="hece-resim.js"></script>
+<script src="hece-tema.js"></script>
+<script>
+  // Kendi görsellerin için: gorseller: ["gorseller/resim-1.jpg"], gorselOlasiligi: 0.6
+  HeceResim.bagla(document.getElementById("resim"), document.getElementById("yenile"));
+</script>
+<script>
+  document.querySelectorAll("a.eposta").forEach(a => {
+    const adres = a.dataset.k + "@" + a.dataset.a;
+    a.href = "mailto:" + adres;
+    a.title = adres;
+  });
+</script>
+</body>
+</html>
